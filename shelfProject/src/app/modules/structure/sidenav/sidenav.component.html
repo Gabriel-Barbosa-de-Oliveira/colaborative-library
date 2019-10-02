@@ -1,0 +1,26 @@
+<aside class="sidenav-container">
+  <a routerLink="/organizador">
+    <img
+      src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png"
+    />
+  </a>
+  <section class="identification">
+    <p class="title">{{ user?.user_name }}</p>
+  </section>
+  <nav class="navlist">
+    <ul>
+      <a routerLink="/organizador">
+        <li class="spacer item"><mat-icon>dashboard</mat-icon>Dashboard</li>
+      </a>
+      <a routerLink="/organizador/projetos">
+        <li class="spacer item"><mat-icon>assignment</mat-icon>Projetos</li>
+      </a>
+      <a routerLink="/organizador/usuarios" *ngIf="isRootUser">
+        <li class="spacer item"><mat-icon>supervised_user_circle</mat-icon>Usuários</li>
+      </a>
+      <a (click)="logOut()">
+        <li class="spacer item"><mat-icon>exit_to_app</mat-icon>Sair</li>
+      </a>
+    </ul>
+  </nav>
+</aside>

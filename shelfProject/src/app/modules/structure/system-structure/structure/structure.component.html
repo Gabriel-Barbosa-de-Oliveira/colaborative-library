@@ -1,0 +1,24 @@
+<section class="system-structure">
+  <header class="header">
+    <label class="main-nav-list-item" :for="systemMenu">
+      <a class="cart">
+        <mat-icon>menu</mat-icon>
+      </a>
+    </label>
+  </header>
+  <aside><app-sidenav></app-sidenav></aside>
+  <main><ng-content select=".main-content"></ng-content></main>
+
+  <div>
+    <input type="checkbox" id="systemMenu" class="hidden" />
+    <label class="label-menu-background" :for="mainmenu"></label>
+    <div class="main-nav-cart-list">
+      <app-sidenav></app-sidenav>
+    </div>
+    <label
+      class="label-menu-background cart"
+      :for="systemMenu"
+      id="cart"
+    ></label>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+.form-container {
+    width: 300px;
+    padding: 16px;
+    display: grid;
+    display: -ms-grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: 2px;
+    background-color: #ffffff;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    mat-form-field,
+    button {
+      width: 100%;
+    }
+  
+    button {
+      margin-bottom: 10px;
+    }
+  }
+  
+  small {
+    text-decoration: underline;
+    color: #1f75fe;
+    cursor: pointer;
+  }
+  

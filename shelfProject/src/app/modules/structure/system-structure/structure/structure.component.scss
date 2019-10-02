@@ -1,0 +1,121 @@
+.system-structure {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "nav  main";
+    grid-template-rows: 1fr;
+    grid-template-columns: 20% auto;
+    // background-image: url("../../../../assets/background.jpg");
+    background-size: cover;
+  }
+  
+  .system-structure > header {
+    display: none;
+  }
+  
+  .system-structure > aside {
+    grid-area: nav;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .system-structure > main {
+    grid-area: main;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  @media screen and (max-width: 60em) {
+    .system-structure {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 40em) {
+    .system-structure > header {
+      display: inherit;
+    }
+  
+    .system-structure {
+      display: grid;
+      width: 100%;
+      grid-template-areas: "head" "main";
+      grid-template-rows: 50px 1fr;
+      grid-template-columns: 1fr;
+    }
+  
+    .system-structure > main {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  
+    aside {
+      display: none;
+    }
+  
+    .header {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 1);
+      position: fixed;
+      height: 51px;
+      z-index: 1;
+    }
+  }
+  
+
+  .header {
+    display: flex;
+    align-items: center;
+  
+    mat-icon {
+      margin-left: 16px;
+      color: #ffffff;
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .main-nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .main-nav-list-item {
+    .header-container {
+      grid-template-columns: 50px auto;
+      justify-content: flex-start;
+    }
+  }
+  
+  .main-nav-cart-list {
+    overflow: scroll;
+    position: fixed;
+    display: initial;
+    top: 0;
+    left: -150%;
+    bottom: 0;
+    width: 75%;
+    max-width: 75%;
+    z-index: 100;
+    box-shadow: 0 5px 20px black;
+    transition: all 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  #systemMenu:checked ~ .label-menu-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  #systemMenu:checked ~ .main-nav-cart-list {
+    left: 0 !important;
+  }
+
+  
