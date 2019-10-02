@@ -1,5 +1,5 @@
 <aside class="sidenav-container">
-  <a routerLink="/organizador">
+  <a routerLink="/">
     <img
       src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png"
     />
@@ -9,14 +9,11 @@
   </section>
   <nav class="navlist">
     <ul>
-      <a routerLink="/organizador">
+      <a routerLink="/">
         <li class="spacer item"><mat-icon>dashboard</mat-icon>Dashboard</li>
       </a>
-      <a routerLink="/organizador/projetos">
-        <li class="spacer item"><mat-icon>assignment</mat-icon>Projetos</li>
-      </a>
-      <a routerLink="/organizador/usuarios" *ngIf="isRootUser">
-        <li class="spacer item"><mat-icon>supervised_user_circle</mat-icon>Usuários</li>
+      <a routerLink="/">
+        <li class="spacer item"><mat-icon>assignment</mat-icon>Livros</li>
       </a>
       <a (click)="logOut()">
         <li class="spacer item"><mat-icon>exit_to_app</mat-icon>Sair</li>
