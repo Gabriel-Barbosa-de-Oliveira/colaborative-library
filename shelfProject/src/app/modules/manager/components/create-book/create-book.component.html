@@ -1,0 +1,40 @@
+
+  <app-structure [formGroup]="formModel">
+    <section class="main-content">
+      <section class="main-content">
+        <div class="title-section">
+          <h2>
+            Novo Livro
+          </h2>
+        </div>
+
+        <div class="book-container">
+          <mat-form-field>
+            <input matInput placeholder="Nome" formControlName="name" />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Url da Imagem"
+              formControlName="image"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Descrição"
+              formControlName="description"
+            />
+          </mat-form-field>
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="!formModel.valid"
+            (click)="postNewBook()"
+          >
+            Cadastrar
+          </button>
+        </div>
+      </section>
+    </section>
+  </app-structure>

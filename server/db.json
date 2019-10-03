@@ -7,13 +7,13 @@
       "password": "WiKnWDhHNrkOWYj"
     },
     {
-      "id": 62945674,
+      "id": 27940466,
       "name": "Marcela Braga",
       "email": "gor_Martins@gmail.com",
       "password": "n_XbowedO6BTk3k"
     },
     {
-      "id": 27940466,
+      "id": 62945674,
       "name": "Heitor Silva",
       "email": "Marcos.Costa32@live.com",
       "password": "jE9EaIe7ZwzdCua"
@@ -100,6 +100,13 @@
       "image": "https://images-na.ssl-images-amazon.com/images/I/51xH0mWSeGL._SX331_BO1,204,203,200_.jpg",
       "userId": 46381003,
       "loan": false
+    },
+    {
+      "name": "Clean Code",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51d1qVhmAmL.jpg",
+      "description": "Teste123",
+      "loan": false,
+      "id": 89132677
     }
   ]
 }

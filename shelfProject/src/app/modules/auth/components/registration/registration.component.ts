@@ -47,7 +47,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   saveUser() {
-    this._apiService.postNewUser(this.formModel.value).subscribe(
+    this._apiService.postNewBook(this.formModel.value).subscribe(
       success => {
         localStorage.setItem("user", JSON.stringify(success));
         this.setRootUser(success);

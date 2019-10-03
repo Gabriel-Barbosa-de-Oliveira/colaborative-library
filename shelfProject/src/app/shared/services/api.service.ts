@@ -41,19 +41,19 @@ export class ApiService {
     });
   }
 
-  public getSpecificProject(id: any): Observable<any> {
+  public getMyBooks(id: any): Observable<any> {
     let headers = this.defaultHeaders;
 
-    return this.httpClient.get<any>(`${this.basePath}project/${id}`, {
+    return this.httpClient.get<any>(`${this.basePath}books?userId=${id}`, {
       withCredentials: null,
       headers: headers
     });
   }
 
-  public postNewUser(user: ICreateUser): Observable<any> {
+  public postNewBook(book): Observable<any> {
     let headers = this.defaultHeaders;
 
-    return this.httpClient.post<any>(`${this.basePath}users`, user, {
+    return this.httpClient.post<any>(`${this.basePath}books`, book, {
       withCredentials: null,
       headers: headers
     });
