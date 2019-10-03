@@ -8,6 +8,10 @@ import { RegistrationComponent } from "./modules/auth/components/registration/re
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "cadastro", component: RegistrationComponent },
+  {
+    path: "estante",
+    loadChildren: "./modules/manager/shelfs.module#ShelfsModule",
+  },
   { path: "", redirectTo: "login", pathMatch: "full" }
 ];
 

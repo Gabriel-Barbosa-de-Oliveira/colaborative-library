@@ -2,7 +2,6 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
-import { IProject } from "src/app/models/projects.interface";
 import { ICreateUser } from "src/app/models/create-user.interface";
 import { ILogin } from "src/app/models/login.interface";
 
@@ -15,10 +14,10 @@ export class ApiService {
 
   constructor(protected httpClient: HttpClient) {}
 
-  public getProjects(): Observable<any> {
+  public getBooks(): Observable<any> {
     let headers = this.defaultHeaders;
 
-    return this.httpClient.get<any>(`${this.basePath}project`, {
+    return this.httpClient.get<any>(`${this.basePath}books`, {
       withCredentials: null,
       headers: headers
     });
@@ -60,14 +59,14 @@ export class ApiService {
     });
   }
 
-  public postNewProject(project: IProject): Observable<any> {
-    let headers = this.defaultHeaders;
+  // public postNewProject(project: IProject): Observable<any> {
+  //   let headers = this.defaultHeaders;
 
-    return this.httpClient.post<any>(`${this.basePath}project`, project, {
-      withCredentials: null,
-      headers: headers
-    });
-  }
+  //   return this.httpClient.post<any>(`${this.basePath}project`, project, {
+  //     withCredentials: null,
+  //     headers: headers
+  //   });
+  // }
 
   public authenticateUser(user: ILogin): Observable<any> {
     let headers = this.defaultHeaders;
@@ -77,12 +76,12 @@ export class ApiService {
     return this.httpClient.get<any>(`${this.basePath}users`, { params: params });
   }
 
-  public putSpecificProject(id: any, project: IProject): Observable<any> {
-    let headers = this.defaultHeaders;
+  // public putSpecificProject(id: any, project: IProject): Observable<any> {
+  //   let headers = this.defaultHeaders;
 
-    return this.httpClient.put<any>(`${this.basePath}project/${id}`, project, {
-      withCredentials: null,
-      headers: headers
-    });
-  }
+  //   return this.httpClient.put<any>(`${this.basePath}project/${id}`, project, {
+  //     withCredentials: null,
+  //     headers: headers
+  //   });
+  // }
 }

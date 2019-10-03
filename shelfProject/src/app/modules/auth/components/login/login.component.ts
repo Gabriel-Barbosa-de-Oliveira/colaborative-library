@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
       success => {
         if (success.length > 0){
           localStorage.setItem("user", JSON.stringify(success));
-          this._router.navigate(["/organizador"]);
+          this._router.navigate(["/estante"]);
         }else{
           this._toastrService.info("Usuário Não Encontrado", "Usuário");
         }

@@ -51,7 +51,7 @@ export class RegistrationComponent implements OnInit {
       success => {
         localStorage.setItem("user", JSON.stringify(success));
         this.setRootUser(success);
-        this._router.navigate(["/organizador"]);
+        this._router.navigate(["/estante"]);
       },
       error => {
         this._toastrService.error("Erro ao cadastrar novo usuário", "Usuário");

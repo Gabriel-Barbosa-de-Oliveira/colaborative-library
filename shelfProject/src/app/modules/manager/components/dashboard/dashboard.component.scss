@@ -1,0 +1,33 @@
+.dashboard-container {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 0 28px;
+  margin-top: 50px;
+  justify-items: center;
+}
+
+img {
+  height: 180px;
+  width: 235px;
+}
+
+.example-card {
+  max-width: 235px;
+}
+
+p {
+  font-weight: bold;
+  font-size: 14px;
+  height: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.action-button {
+  button {
+    width: 100%;
+  }
+}
