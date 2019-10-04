@@ -5,7 +5,7 @@
     />
   </a>
   <section class="identification">
-    <p class="title">{{ user[0]?.name }}</p>
+    <p class="title">{{ user && user.length > 0 ? user[0]?.name : 'Sem Nome'}}</p>
   </section>
   <nav class="navlist">
     <ul>
