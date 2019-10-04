@@ -11,7 +11,7 @@ import { Router } from "@angular/router";
 })
 export class DashboardComponent implements OnInit {
   books: Array<IBook> = [];
-
+  user = JSON.parse(localStorage.getItem("user"));
   constructor(
     private _router: Router,
     private _apiService: ApiService,
@@ -34,11 +34,31 @@ export class DashboardComponent implements OnInit {
   }
 
   getLoanData(loan: any) {
-    if (!loan) return "Alugar";
-    else return "Alugado";
+    if (!loan) return "Emprestar";
+    else return "Emprestado";
   }
 
   redirectToDetails(id: number) {
     this._router.navigate(["estante/livro/" + id]);
+  }
+
+  borrowBook(book) {
+    book.loan = {
+      userId: this.user[0].id,
+      date: new Date()
+    };
+
+    this.putBook(book);
+  }
+
+  private putBook(book: any) {
+    this._apiService.putBook(book).subscribe(success => {
+      let index = this.books.findIndex(obj => success === obj);
+      this.books[index] = success;
+      this._toastrService.success("Livro Emprestado com sucesso");
+    }, error => {
+      book.loan = false;
+      this._toastrService.error("Erro ao tentar atualizar", "Livro");
+    });
   }
 }

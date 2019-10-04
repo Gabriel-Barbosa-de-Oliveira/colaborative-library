@@ -15,7 +15,7 @@
               ? book.description
               : "Este Livro Não Possui Descrição Cadastrada"
           }}
-          <button mat-raised-button color="primary">
+          <button mat-raised-button color="primary" (click)="borrowBook()" [disabled]="book?.loan != false">
             Emprestar
           </button>
         </div>

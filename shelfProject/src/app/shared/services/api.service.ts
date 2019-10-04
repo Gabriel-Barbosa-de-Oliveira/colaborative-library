@@ -50,29 +50,22 @@ export class ApiService {
     });
   }
 
-  // public postNewProject(project: IProject): Observable<any> {
-  //   let headers = this.defaultHeaders;
+  public putBook(book): Observable<any> {
+    let headers = this.defaultHeaders;
 
-  //   return this.httpClient.post<any>(`${this.basePath}project`, project, {
-  //     withCredentials: null,
-  //     headers: headers
-  //   });
-  // }
+    return this.httpClient.put<any>(`${this.basePath}books/${book.id}`, book, {
+      withCredentials: null,
+      headers: headers
+    });
+  }
 
   public authenticateUser(user: ILogin): Observable<any> {
     let headers = this.defaultHeaders;
     let params = new HttpParams();
-    params = params.append('email', user.name);
-    params = params.append('password', user.password);
-    return this.httpClient.get<any>(`${this.basePath}users`, { params: params });
+    params = params.append("email", user.name);
+    params = params.append("password", user.password);
+    return this.httpClient.get<any>(`${this.basePath}users`, {
+      params: params
+    });
   }
-
-  // public putSpecificProject(id: any, project: IProject): Observable<any> {
-  //   let headers = this.defaultHeaders;
-
-  //   return this.httpClient.put<any>(`${this.basePath}project/${id}`, project, {
-  //     withCredentials: null,
-  //     headers: headers
-  //   });
-  // }
 }
