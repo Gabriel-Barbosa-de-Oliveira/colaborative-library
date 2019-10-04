@@ -9,13 +9,15 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CreateBookComponent } from './components/create-book/create-book.component';
 import { MyBooksComponent } from './components/my-books/my-books.component';
 import { RentedBooksComponent } from './components/rented-books/rented-books.component';
+import { BookDetailComponent } from './components/book-detail/book-detail.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     CreateBookComponent,
     MyBooksComponent,
-    RentedBooksComponent
+    RentedBooksComponent,
+    BookDetailComponent
   ],
   imports: [
     CommonModule,

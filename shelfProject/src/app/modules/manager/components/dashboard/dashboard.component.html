@@ -14,6 +14,7 @@
               mat-card-image
               src="{{ book.image }}"
               alt="Imagem para {{ book.name }}"
+              (click)="redirectToDetails(book.id)"
             />
             <mat-card-content>
               <p>

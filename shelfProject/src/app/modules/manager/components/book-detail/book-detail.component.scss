@@ -1,0 +1,23 @@
+.details-container {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 25% auto;
+  margin-top: 25px;
+  padding: 0 24px;
+  img {
+    width: 207px;
+    height: 253px;
+  }
+}
+
+.info-container {
+  display: grid;
+  display: -ms-grid;
+  grid-template-rows: 1fr 1fr;
+  button {
+    width: 100px;
+    height: 35px;
+    justify-self: end;
+    align-self: end;
+  }
+}

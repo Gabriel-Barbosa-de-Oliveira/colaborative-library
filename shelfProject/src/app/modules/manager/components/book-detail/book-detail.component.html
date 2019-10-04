@@ -1,0 +1,25 @@
+<app-structure>
+  <section class="main-content">
+    <section class="main-content">
+      <div class="title-section">
+        <h2>
+          {{ book?.name }}
+        </h2>
+      </div>
+
+      <section class="details-container">
+        <img src="{{ book?.image }}" />
+        <div class="info-container">
+          {{
+            book && book.description
+              ? book.description
+              : "Este Livro Não Possui Descrição Cadastrada"
+          }}
+          <button mat-raised-button color="primary">
+            Emprestar
+          </button>
+        </div>
+      </section>
+    </section>
+  </section>
+</app-structure>

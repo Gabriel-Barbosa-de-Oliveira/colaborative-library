@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ApiService } from "src/app/shared/services/api.service";
 import { ToastrService } from "ngx-toastr";
 import { IBook } from "src/app/models/book.interface";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-dashboard",
@@ -12,6 +13,7 @@ export class DashboardComponent implements OnInit {
   books: Array<IBook> = [];
 
   constructor(
+    private _router: Router,
     private _apiService: ApiService,
     private _toastrService: ToastrService
   ) {}
@@ -31,10 +33,12 @@ export class DashboardComponent implements OnInit {
     );
   }
 
-  getLoanData(loan: any){
-    if(!loan)
-      return "Alugar"
-    else  
-      return "Alugado"
+  getLoanData(loan: any) {
+    if (!loan) return "Alugar";
+    else return "Alugado";
+  }
+
+  redirectToDetails(id: number) {
+    this._router.navigate(["estante/livro/" + id]);
   }
 }
