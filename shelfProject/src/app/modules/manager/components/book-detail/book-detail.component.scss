@@ -21,3 +21,11 @@
     align-self: end;
   }
 }
+
+@media screen and (max-width: 40em) {
+  .details-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-gap: 16px;
+  }
+}

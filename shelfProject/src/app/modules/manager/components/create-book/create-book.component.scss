@@ -16,3 +16,9 @@ button {
   justify-self: end;
   align-self: center;
 }
+
+@media screen and (max-width: 40em) {
+  .book-container {
+    grid-template-columns: 1fr;
+  }
+}
